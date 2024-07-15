@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grayscale Image Converter</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="nav-bar">
+      <h2> Navigation </h2>
+      <a href="index.html">Image converter</a>
+      <a href="description.html">Description</a>
+      <a href="bibliography.html">Bibliography</a>
+      <div class="footer">
+        &copy; Costache Andrei Darius
+      </div>
+    </div>
+    <div class="content">
+      <h1>Grayscale Image Converter</h1>
+
+      <button class="button" id="loadImageButton">Load Image</button>
+      <button class="button" onclick="revertChanges()">Reset</button>
+      <button class="button" onclick="mirrorImage()">Mirror Image</button>
+      <button class="button" onclick="convertToGrayscale()">Convert to Gray scale</button>
+      <p>
+      <div id="dogImageContainer"></div>
+      <canvas id="canvas" width="400" height="400" style="border: 1px solid #000;"></canvas>
+    </div>
+  </div>
+  </p>
+</body>
+
+</html>

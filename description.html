@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grayscale Image Converter</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="nav-bar">
+      <h2> Navigation </h2>
+      <a href="index.html">Image converter</a>
+      <a href="description.html">Description</a>
+      <a href="bibliography.html">Bibliography</a>
+      <div class="footer">
+        &copy; Costache Andrei Darius
+      </div>
+    </div>
+    <div class="content">
+      <h1>Description</h1>
+
+      <p>
+      <ol>
+        <li>originalImageData: Aceasta variabila este un substituent folosit pentru a stoca datele originale ale
+          imaginii inainte de aplicarea oricaror modificari. Acest lucru permite revenirea la starea originala.</li>
+
+        <li>Event Listeners: Scriptul asteapta ca continutul DOM sa se incarce complet inainte de a configura
+          Event Listeners. Acest lucru asigura ca documentul HTML este pregatit pentru manipulare. Un
+          ascultator de evenimente este atasat unui buton cu ID-ul `loadImageButton`. Cand acest buton este apasat,
+          declanseaza incarcarea asincrona a unei imagini aleatoare cu caine dupa o intarziere simulata de 1 secunda (se
+          foloseste `setTimeout` in acest scop).</li>
+
+        <li>Functia `loadRandomDogImage`: Aceasta functie preia o imagine aleatoare cu caine de la API-ul
+          "https://dog.ceo/api/breeds/image/random" folosind functia `fetch`. Raspunsul este convertit in format JSON,
+          si daca exista un URL valid pentru imagine (`data.message`), imaginea este incarcata folosind functia
+          `loadImage`. Imaginea incarcata este desenata pe un canvas HTML, iar datele originale ale imaginii sunt
+          capturate folosind `ctx.getImageData`. Aceste date originale sunt stocate in variabila `originalImageData`.
+        </li>
+
+        <li>Functia `convertToGrayscale`: Aceasta functie converteste imaginea incarcata pe canvas la tonuri de gri. Mai
+          intai, preia datele originale ale imaginii de pe canvas si imparte imaginea in patru felii orizontale
+          (`sliceHeight`). Fiecare felie este procesata asincron folosind `setTimeout` pentru a simula procesarea in
+          paralel. Conversia la tonuri de gri se realizeaza prin calcularea mediei valorilor RGB ale fiecarui pixel din
+          felie.</li>
+
+        <li>Functia `loadImage`: Aceasta functie utilitara incarca o imagine de la un URL dat in mod asincron.
+          Returneaza
+          o promisiune care se rezolva cand imaginea este incarcata cu succes si se respinge in caz de eroare. Obiectul
+          `Image` este folosit pentru incarcarea asincrona a imaginii.</li>
+
+        <li>Functia `mirrorImage`: Aceasta functie oglindeste orizontal imaginea incarcata pe canvas. Schimba valorile
+          pixelilor din jumatatea stanga a imaginii cu pixelii corespondenti din jumatatea dreapta. Acest lucru creeaza
+          un efect de oglindire.</li>
+
+        <li>Functia `revertChanges`: Aceasta functie restaureaza canvasul la starea sa originala prin stergerea sa si
+          reintroducerea datelor originale ale imaginii stocate in `originalImageData`. Este, in esenta, o modalitate de
+          a anula orice modificari aduse imaginii.</li>
+
+        <li>Masuratori de timp: Pe parcursul codului, se folosesc `console.time` si `console.timeEnd` pentru a masura
+          timpul de executie al anumitor operatii. Acest lucru este util pentru analiza performantelor si intelegerea
+          cat timp dureaza fiecare operatie.</li>
+      </ol>
+      In concluzie, acest cod evidențiază un proces interactiv de manipulare a imaginilor pe un canvas HTML. Include
+      incarcarea imaginilor de la un API, conversia lor la tonuri de gri, oglindirea lor si oferirea optiunii de
+      revenire la starea initiala. Caracterul asincron al operatiilor si utilizarea ascultatorilor de evenimente fac
+      experienta utilizatorului mai dinamica. Masuratorile de timp sunt incluse pentru profilarea și înțelegerea
+      caracteristicilor de performanta ale fiecarei operatii.
+      </ol>
+      </p>
+    </div>
+  </div>
+</body>
+
+</html>
