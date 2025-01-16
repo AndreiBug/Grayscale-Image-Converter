@@ -1,69 +1,69 @@
 # Grayscale Image Converter
 
-Un proiect interactiv care permite încărcarea, manipularea și conversia imaginilor utilizând un canvas HTML. Proiectul include funcționalități precum încărcarea imaginilor de la un API, conversia acestora în tonuri de gri, oglindirea lor și restaurarea la starea originală.
+An interactive project that allows loading, manipulating, and converting images using an HTML canvas. The project includes features like fetching images from an API, converting them to grayscale, mirroring them, and restoring them to their original state.
 
 ---
 
-## Caracteristici
-- **Încărcare asincronă a imaginilor**: Poți încărca imagini random cu câini folosind API-ul [Dog CEO](https://dog.ceo/dog-api/).
-- **Conversie la tonuri de gri**: Conversie pe secțiuni pentru a îmbunătăți performanța și a simula procesarea paralelă.
-- **Oglindirea imaginilor**: Oglindirea orizontală a imaginii utilizând datele pixelilor.
-- **Revenire la starea inițială**: Restaurarea imaginii originale de pe canvas.
-- **Profilare și măsurători**: Utilizarea funcțiilor `console.time` și `console.timeEnd` pentru analiza performanței.
+## Features
+- **Asynchronous Image Loading**: Fetch random dog images using the [Dog CEO API](https://dog.ceo/dog-api/).
+- **Grayscale Conversion**: Converts images to grayscale in sections to improve performance and simulate parallel processing.
+- **Image Mirroring**: Horizontally mirrors images using pixel data manipulation.
+- **Restore Original Image**: Restores the image on the canvas to its initial state.
+- **Profiling and Measurements**: Uses `console.time` and `console.timeEnd` to analyze performance.
 
 ---
 
-## Structura Proiectului
+## Project Structure
 
 ```plaintext
-|-- index.html            # Pagina principală
-|-- description.html      # Descrierea funcționalităților
-|-- bibliography.html     # Surse utilizate
-|-- style.css             # Stilizarea aplicației
-|-- script.js             # Funcționalitățile aplicației
-|-- README.md             # Documentația proiectului (acest fișier)
+|-- index.html            # Main page
+|-- description.html      # Feature descriptions
+|-- bibliography.html     # References used
+|-- style.css             # Application styling
+|-- script.js             # Application functionality
+|-- README.md             # Project documentation (this file)
 ```
 
 ---
 
-## Tehnologii Utilizate
-- **HTML5** pentru structura aplicației
-- **CSS3** pentru stilizare
-- **JavaScript (ES6)** pentru funcționalitate
-- **Canvas API** pentru manipularea imaginilor
+## Technologies Used
+- **HTML5** for application structure
+- **CSS3** for styling
+- **JavaScript (ES6)** for functionality
+- **Canvas API** for image manipulation
 
 ---
 
-## Cum să Rulezi Proiectul
-1. Clonează repository-ul:
+## How to Run the Project
+1. Clone the repository:
    ```bash
    git clone https://github.com/username/grayscale-image-converter.git
    ```
-2. Navighează în folderul proiectului:
+2. Navigate to the project folder:
    ```bash
    cd grayscale-image-converter
    ```
-3. Deschide fișierul `index.html` într-un browser.
+3. Open the `index.html` file in a browser.
 
 ---
 
-## Funcționalități Cheie
+## Key Features
 
-### 1. Încărcare Imagine
-Clic pe butonul `Load Image` pentru a încărca o imagine random cu un câine. Imaginea este desenată pe un canvas HTML.
+### 1. Load Image
+Click the `Load Image` button to fetch a random dog image. The image is drawn onto an HTML canvas.
 
-### 2. Conversie la Tonuri de Gri
-Clic pe butonul `Convert to Gray scale` pentru a transforma imaginea într-o versiune alb-negru. Procesarea este împărțită în 4 secțiuni pentru o execuție mai rapidă.
+### 2. Convert to Grayscale
+Click the `Convert to Grayscale` button to transform the image to a black-and-white version. Processing is divided into 4 sections for faster execution.
 
-### 3. Oglindire Imagine
-Clic pe butonul `Mirror Image` pentru a crea un efect de oglindire orizontală.
+### 3. Mirror Image
+Click the `Mirror Image` button to create a horizontal mirroring effect.
 
-### 4. Restaurare Imagine
-Clic pe butonul `Reset` pentru a restaura imaginea la starea originală.
+### 4. Restore Image
+Click the `Reset` button to restore the image to its original state.
 
 ---
 
-## Bibliografie
+## References
 - [W3Schools HTML](https://www.w3schools.com/html/)
 - [W3Schools CSS](https://www.w3schools.com/css/)
 - [W3Schools JavaScript](https://www.w3schools.com/js/default.asp)
